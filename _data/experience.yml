@@ -1,0 +1,49 @@
+- title: Stage pre-ingenieur
+  company: CRTV
+  company_url: https://crtv.cm # <--- NOUVELLE CLÉ À AJOUTER
+  logo_url: /assets/img/icons/crtv.png # <--- NOUVEAU: Chemin vers votre logo
+  location: Mballa 2, Cameroun
+  period: Juillet - Sept. 2025
+  icon_type: fas fa-lock # <--- NOUVEAU: Icône Font Awesome pour la catégorie (ex: cadenas pour Sécurité)
+  highlights:
+    - Mise en place d'un Systeme de suivi des Affaires Juridiques et du contentieux.
+    - Analyse des besoins et conception d'une architecture de donnees ( Cahier de charges ci-dessous).
+    - Intervention a la direction generale et salle d'archivage numerique ( + 7 Unites de la DSI  ).
+  
+  doc_link: /assets/pdf/CDC - DAJC V1.0.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_text: Voir (PDF) # <
+
+  technologies:
+  - name: Astah 
+    url: https://astah.net/
+  - name: oracle
+    url: https://www.oracle.com/fr/  
+  - name: MS visio
+    url: https://www.microsoft.com/fr-fr/microsoft-365/visio/
+
+
+- title: Stage Academique
+  company: ENSPY
+  company_url: https://polytechnique.cm  # <--- NOUVELLE CLÉ À AJOUTER
+  logo_url: /assets/img/icons/enspy.png # <--- NOUVEAU: Chemin vers votre logo
+  location: Melen, Cameroun
+  period: Juin - Sept. 2024
+  icon_type: fas fa-graduation-cap # <--- NOUVEAU: Icône Font Awesome pour la catégorie (ex: cadenas pour Sécurité)
+  highlights:
+    - Mise en place d'un Systeme de suivi des Affaires Juridiques et du contentieux.
+    - Analyse des besoins et conception d'une architecture de donnees ( Cahier de charges ci-dessous).
+    - Intervention a la direction generale et salle d'archivage numerique ( + 7 Unites de la DSI  ).
+  
+  doc_link: /assets/pdf/Memoire_BIKOURI_L3.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_text: Memoire (PDF) # <
+
+  slides_link: /assets/pdf/PRESENTATION_BIKOURI.pdf # <--- NOUVELLE CLÉ 1
+  slides_text: Diapositives  # <--- NOUVELLE CLÉ 2
+
+  technologies:
+  - name: Astah 
+    url: https://astah.net/
+  - name: django
+    url: https://www.djangoproject.com/
+  - name: MS visio
+    url: https://www.microsoft.com/fr-fr/microsoft-365/visio/

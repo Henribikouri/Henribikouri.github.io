@@ -1,0 +1,17 @@
+nav_list_title: Navigation List
+links:
+
+- title: À Propos
+  url: about.html
+
+# - title: Publications
+#   url: publications.html
+
+- title: Blog
+  url: blog.html
+
+- title: CV
+  url: /assets/pdf/CV_HENRI_BIKOURI.pdf
+
+- title: Contact
+  url: contact.html

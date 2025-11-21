@@ -1,0 +1,39 @@
+# - name: Publications
+#   id: publications
+#   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+#   url: publications.html
+#   first: true
+
+- name: Experience
+  id: experience
+  description: Vous retrouvez ici mon experience professionnelle et academique 
+  url: experience.html
+  first: true # Important : nous gérons la classe 'active' dans le code HTML.
+# ... autres sections ...
+
+- name: Formation
+  id: education
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  url: education.html
+  first: false
+
+# - name: Coursework
+#   id: courses
+#   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+#   content: 
+#   first: false
+
+# - name: Teaching
+#   id: teaching
+#   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+#   content: 
+#   url: teaching.html
+#   first: false
+
+- name: Projets
+  id: projets
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  content: 
+  url: projets.html
+  first: false
+
