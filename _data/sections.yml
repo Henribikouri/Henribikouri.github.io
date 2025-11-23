@@ -11,10 +11,16 @@
   first: true # Important : nous gérons la classe 'active' dans le code HTML.
 # ... autres sections ...
 
-- name: Formation
-  id: education
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  url: education.html
+# - name: Formation
+#   id: education
+#   description: Ici, vous retrouvez mon parcours académique
+#   url: education.html
+#   first: false
+
+- name: Formations
+  id: formations
+  description: Ici, vous retrouvez mon parcours académique
+  url: formations.html
   first: false
 
 # - name: Coursework

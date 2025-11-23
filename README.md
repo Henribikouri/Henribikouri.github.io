@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-    <h1 align="center">Dumbarton</h1>
+    <h1 align="center">HENRI</h1>
     <p align="center">
         A simple Jekyll theme for academics
         <br />

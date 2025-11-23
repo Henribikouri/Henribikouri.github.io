@@ -1,6 +1,7 @@
 - title: Stage pre-ingenieur
   company: CRTV
   company_url: https://crtv.cm # <--- NOUVELLE CLÉ À AJOUTER
+  domain: Genie Logiciel
   logo_url: /assets/img/icons/crtv.png # <--- NOUVEAU: Chemin vers votre logo
   location: Mballa 2, Cameroun
   period: Juillet - Sept. 2025
@@ -25,6 +26,7 @@
 - title: Stage Academique
   company: ENSPY
   company_url: https://polytechnique.cm  # <--- NOUVELLE CLÉ À AJOUTER
+  domain: Programmation Web 
   logo_url: /assets/img/icons/enspy.png # <--- NOUVEAU: Chemin vers votre logo
   location: Melen, Cameroun
   period: Juin - Sept. 2024
@@ -47,3 +49,5 @@
     url: https://www.djangoproject.com/
   - name: MS visio
     url: https://www.microsoft.com/fr-fr/microsoft-365/visio/
+
+

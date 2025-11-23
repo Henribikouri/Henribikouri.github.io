@@ -1,0 +1,21 @@
+- degree: Master 2 en Ingénierie des Systèmes d'Information
+  institution: Université X / École d'Ingénieurs Y
+  duration: 2023 - 2025
+  location: Paris, France
+  icon_type: fas fa-book-open  # Icône académique
+  color_accent: info # Couleur d'accentuation Bootstrap
+  details:
+    - Mémoire sur l'Apprentissage Profond et la sécurité des données.
+    - Projet majeur en gestion de bases de données distribuées.
+
+
+- degree: Master 2 en Ingénierie des Systèmes d'Information
+  institution: Université X / École d'Ingénieurs Y
+  duration: 2023 - 2025
+  location: Paris, France
+  icon_type: fas fa-book # Icône académique
+  color_accent: secondary # Couleur d'accentuation Bootstrap
+  details:
+    - Mémoire sur l'Apprentissage Profond et la sécurité des données.
+    - Projet majeur en gestion de bases de données distribuées.
+

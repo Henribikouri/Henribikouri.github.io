@@ -18,6 +18,115 @@ html {
     /* Si le fond de l'onglet actif est aussi blanc, ceci rendra le texte gris foncé */
 }
 
+/* --- Styles pour la Timeline Académique --- */
+
+/* Le conteneur principal (position relative pour les points absolus) */
+.timeline-container {
+    position: relative;
+    padding-left: 50px;
+}
+
+/* La ligne verticale centrale (l'innovation) */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #dee2e6; /* Ligne grise subtile */
+    top: 0;
+    bottom: 0;
+    left: 20px; /* Positionnement de la ligne */
+    z-index: 1;
+}
+
+/* Les points de la timeline (les cercles avec icônes) */
+.timeline-point {
+    position: absolute;
+    top: 15px; /* Décalage pour aligner sur le titre */
+    left: -45px;
+    z-index: 2; /* Devant la ligne */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    border: 3px solid #fff; /* Effet d'anneau blanc */
+    box-shadow: 0 0 0 1px #dee2e6;
+}
+.timeline-item {
+    position: relative; /* <-- AJOUTER : C'EST LA CLÉ ! */
+    margin-bottom: 20px; /* Espace entre les formations */
+}
+/* Ajustement du contenu de la carte */
+.timeline-content {
+    position: relative;
+    margin-left: 20px; /* Décalage pour laisser la place au point/ligne */
+    padding-left: 10px;
+}
+
+/* Animation et Style au survol (UX Accrocheur) */
+.timeline-content:hover {
+    transform: translateY(-2px); /* Léger soulèvement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Effet thématique pour les listes de détails de formation --- */
+
+.timeline-content .card-body ul {
+    border-top: 2px solid #f0f0f0; /* Ligne de séparation subtile */
+    padding-top: 15px;
+    margin-top: 15px !important;
+}
+
+/* Style des éléments de liste avec transition de couleur au survol */
+.timeline-content .card-body ul li {
+    transition: color 0.3s ease-in-out;
+}
+
+.timeline-content .card-body ul li:hover {
+    color: #149f98; /* La couleur de votre thème pour le survol */
+}
+
+/* --- Effet de Survol sur chaque Expérience --- */
+.media.border-bottom {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer; /* Indique à l'utilisateur que c'est interactif */
+    border-bottom: 1px solid #e9ecef !important; /* Maintient une bordure subtile de base */
+}
+
+.media.border-bottom:hover {
+    background-color: #fafafa; /* Très léger changement de fond */
+    transform: translateY(-3px); /* Le soulèvement, l'effet "de ouf" */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Ombre douce */
+    border-bottom: 1px solid transparent !important; /* Cache la bordure pour un look plus clean au survol */
+}
+
+.custom-filter-btn {
+    /* La clé pour le raffinement : un padding plus petit */
+    padding: 0.35rem 1.1rem !important; /* Petit padding vertical, bon padding horizontal */
+    font-size: 0.9rem !important; /* Texte légèrement plus petit */
+    line-height: 1.5; /* Assure un bon alignement du texte/icône */
+    
+    /* Le reste pour l'effet "de ouf" */
+    font-weight: 600; 
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Effet "De Ouff" au Survol ou à l'Activation */
+.custom-filter-btn:hover {
+    transform: translateY(-2px); /* Léger soulèvement */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+}
+
+/* Style de l'état ACTIF (bouton sélectionné) */
+.custom-filter-btn.active {
+    /* La couleur primaire de Bootstrap est déjà utilisée, on renforce l'ombre */
+    box-shadow: 0 0 0 3px rgba(20, 159, 152, 0.4), /* Anneau coloré autour du bouton */
+                0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02); /* Léger agrandissement pour le mettre en évidence */
+}
+
 /* --- Pour les onglets de contenu (s'il y en a sur la page d'accueil) --- */
 
 .nav-tabs .nav-link.active {
