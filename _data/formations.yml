@@ -1,21 +1,56 @@
-- degree: Master 2 en Ingénierie des Systèmes d'Information
-  institution: Université X / École d'Ingénieurs Y
-  duration: 2023 - 2025
-  location: Paris, France
+- degree: Master of Engineering
+  institution: Université Y1 / École polytechnique
+  duration: 2024 - 2026
+  location: Yaounde, Cameroun
   icon_type: fas fa-book-open  # Icône académique
   color_accent: info # Couleur d'accentuation Bootstrap
   details:
-    - Mémoire sur l'Apprentissage Profond et la sécurité des données.
-    - Projet majeur en gestion de bases de données distribuées.
+    - Master en sciences de l'Ingénieur , en genie informatique.
+    - Mémoire final axer sur l'IA en integration au genie logiciel.
 
 
-- degree: Master 2 en Ingénierie des Systèmes d'Information
-  institution: Université X / École d'Ingénieurs Y
-  duration: 2023 - 2025
-  location: Paris, France
+- degree: Bachelor's degree   
+  institution: Université Y1 / École polytechnique
+  duration: 2021 - 2024
+  location: Yaounde, Cameroun
+  icon_type: fas fa-book # Icône académique
+  color_accent: info # Couleur d'accentuation Bootstrap
+  details:
+    - Licence en sciences de l'Ingénieur, genie informatique.
+    - Chef de plusieurs projets académiques et collaboratifs.
+
+
+- degree: Baccalauréat scientifique 'C'  
+  institution: Lycée / Cité des palmiers
+  duration: 2020 - 2021
+  location: Douala, Cameroun
+  icon_type: fas fa-book-open # Icône académique
+  color_accent: info # Couleur d'accentuation Bootstrap
+  details:
+    - Spécialités 'Mathematiques et sciences physiques'.
+    - Meilleur élève en sciences physiques de la promotion.
+    - Major au concours d'entrée a l'École polytechnique de Yaounde.
+
+
+
+- degree: Premier cycle d'études secondaires
+  institution: Collège / Evangelique de New-Bell
+  duration: 2012 - 2016
+  location: Douala, Cameroun
   icon_type: fas fa-book # Icône académique
   color_accent: secondary # Couleur d'accentuation Bootstrap
   details:
-    - Mémoire sur l'Apprentissage Profond et la sécurité des données.
-    - Projet majeur en gestion de bases de données distribuées.
+    - Delegué chargé de la discipline des la classe .
+    - Distinction d'excellence durant tout le cycle par le principal.
+
+
+- degree: Cycle d'études primaires
+  institution: École publique / Camp militaire Mboppi
+  duration: -- - 2012  
+  location: Douala, Cameroun
+  icon_type: fas fa-book-open # Icône académique     
+  color_accent: info # Couleur d'accentuation Bootstrap
+  details:
+    - Chef de classe  aux cours moyens  2  .
+    
 

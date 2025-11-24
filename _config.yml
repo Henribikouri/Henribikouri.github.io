@@ -10,7 +10,8 @@
 
 title: Henri Bikouri 
 email: henri.bikouri@enspy-uy1.cm
-description: a minimalistic henri site for academics
+description: site web personnel de henri bikouri, etudiant en genie informatique / logiciel a l'enspy
+keywords: henri, bikouri, henri bikouri,henri bikouri bi bep, bi bep,bikouri bi bep henri, Bikouri BI BEP,Bi Bep Henri,  henri bikouri site web, henri bikouri personnel, henri bikouri portfolio, henri bikouri github, henri bikouri blog, henri bikouri etudiant, henri bikouri informatique, henri bikouri genie logiciel
 baseurl:                                       # the subpath of your site, e.g. /blog
 url: "https://henribikouri.github.io"          # the base hostname & protocol for your site, e.g. http://example.com
 image: /assets/img/croppeda.jpg               # used to generate site link preview
@@ -139,7 +140,7 @@ font_awesome_id: 32a2b2a489                       # Register for free at https:/
 # =======================================#        # For more information about these settings, visit https://htmlhead.dev #
 # ------------META TAG SETTINGS----------#
 #========================================#
-google-site-verification:                         #<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
+google-site-verification: ORoUFOJqxXbH2OLpliZMDAx_Wtb3qt7BNZ4lmfW-K8U                       #<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
 yandex-verification:                              #<meta name="yandex-verification" content="verification_token"><!-- Yandex Webmasters -->
 msvalidate:                                       # meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
 alexaVerifyID:                                    # <meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console -->

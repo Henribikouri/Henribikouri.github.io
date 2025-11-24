@@ -38,7 +38,7 @@
 
 - name: Projets
   id: projets
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: Quelques Projets fares que j'ai realiser durant mon parcours.
   content: 
   url: projets.html
   first: false
