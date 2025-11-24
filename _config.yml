@@ -150,7 +150,7 @@ detectphone: yes                                  # yes or no. Disable automatic
 x-dns-prefetch-control: on                        # on or off. Completely opt out of DNS prefetching by setting to "off"
 fbappid:                                          # Facebook OpenGraph 
 
-
+<meta name="google-site-verification" content="ORoUFOJqxXbH2OLpliZMDAx_Wtb3qt7BNZ4lmfW-K8U" />
 
 
 pgp-key: "-----BEGIN PGP PUBLIC KEY BLOCK-----
