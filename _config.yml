@@ -1,29 +1,29 @@
 # =======================================#
 # -----------DUMBARTON THEME-------------#
-# ----------------By: Tyler Butler-------#
-#-----------------https://tbutler.org----#
+# ----------------By: HENRI BIKOURI-------#
+#-----------------https://henribikouri.github.io----#
 #========================================#
 
 # =======================================#
 # -----------BASE SETTINGS---------------#
 #========================================#
 
-title: Henri Bikouri 
+title: Henri Bikouri
 email: henri.bikouri@enspy-uy1.cm
-description: Ingenieur en genie informatique de l'ecole nationale superieure polytechnique de Yaounde. Passionne par le developpement web et mobile, l'intelligence artificielle et le genie logiciele et le cloud computing / virtualisation.
-keywords: henri, bikouri, henri bikouri,henri bikouri bi bep, bi bep,bikouri bi bep henri, Bikouri BI BEP,Bi Bep Henri,  henri bikouri site web, henri bikouri personnel, henri bikouri portfolio, henri bikouri github, henri bikouri blog, henri bikouri etudiant, henri bikouri informatique, henri bikouri genie logiciel
+description: Ingénieur en génie informatique à l'École Polytechnique de Yaoundé, spécialisé en intelligence artificielle, génie logiciel et cloud computing, aime egalement la virtualisation .
+keywords: Henri Bikouri, ingénieur informatique, génie logiciel, intelligence artificielle, cloud computing, portfolio développeur, ENSPY, Yaoundé
 baseurl:                                       # the subpath of your site, e.g. /blog
 url: "https://henribikouri.github.io"          # the base hostname & protocol for your site, e.g. http://example.com
 image: /assets/img/croppeda.jpg               # used to generate site link preview
-image_alt: A minimalistic henri theme for academic    # image description
+image_alt: site web professionnel de Henri BIKOURI , ingenieur en genie informatique     # image description
 
 # =======================================#
 # -----------SITE SETTINGS---------------#
-#========================================#: 
-author: Henri Bikouri 
-profile_image: /assets/img/avatar/cropped.jpg #/assets/img/avatar/avatar.jpeg 
-occupation: 
-snippet:
+#========================================#
+author: Henri Bikouri
+profile_image: /assets/img/avatar/cropped.jpg
+occupation: Ingénieur Informatique
+snippet: Spécialisé en IA, génie logiciel et cloud computing
 twitter: hbikouri
 github: Henribikouri
 linkedin: henri-bikouri-bi-bep-a14463281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
@@ -31,7 +31,6 @@ stackoverflow:
 website: 
 codepen: 
 medium: 
-email: henri.bikouri@enspy-uy1.cm
 keybase: 
 pgp: 
 ctftime: 

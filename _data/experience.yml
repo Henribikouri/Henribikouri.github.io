@@ -32,9 +32,9 @@
   period: Juin - Sept. 2024
   icon_type: fas fa-graduation-cap # <--- NOUVEAU: Icône Font Awesome pour la catégorie (ex: cadenas pour Sécurité)
   highlights:
-    - Mise en place d'un Systeme de suivi des Affaires Juridiques et du contentieux.
-    - Analyse des besoins et conception d'une architecture de donnees ( Cahier de charges ci-dessous).
-    - Intervention a la direction generale et salle d'archivage numerique ( + 7 Unites de la DSI  ).
+    - Conception et implementation d'une applicationn web de teleconsultation medicale.
+    - Conçu pour prendre en charges les femmes enceintes vivantes dans les zonnes rurales .
+    - Configuration de la gestion des rôles  ( Agent communautaire, patiente et Docteur).
   
   doc_link: /assets/pdf/Memoire_BIKOURI_L3.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
   doc_text: Memoire (PDF) # <

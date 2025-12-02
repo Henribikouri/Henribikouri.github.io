@@ -7,6 +7,7 @@ html {
   body {
     margin-bottom: 60px;
     position: relative;
+    background-color: #fafafa;
   }
   
   /* --- Pour la navigation principale (navbar) --- */
@@ -19,7 +20,152 @@ html {
 }
 
 /* --- Styles pour la Timeline Académique --- */
+/* --- STYLE PROJET "TUEUR D'EXPERT" --- */
 
+/* La Carte Principale */
+.project-card-pro {
+    background: #fff;
+    border-radius: 15px; /* Arrondi moderne */
+    overflow: hidden;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); Ombre douce et large */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Effet de ressort au survol */
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+    top: 0;
+    /* On renforce légèrement l'ombre pour la faire flotter du fond #fafafa */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Interaction au Survol de la Carte */
+.project-card-pro:hover {
+    transform: translateY(-10px); /* La carte monte */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* L'ombre s'intensifie */
+}
+
+/* Zone Image */
+.card-img-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+/* Zoom Image au Survol */
+.project-card-pro:hover .project-img {
+    transform: scale(1.1); /* Zoom cinématique */
+}
+
+/* Badge Statut */
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+/* Overlay (Voile sombre au survol de l'image) */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(20, 159, 152, 0.85); /* Votre couleur thème en transparence */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card-pro:hover .project-overlay {
+    opacity: 1; /* Apparaît au survol */
+}
+
+/* Boutons ronds dans l'image */
+.overlay-btn {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.project-card-pro:hover .overlay-btn {
+    transform: translateY(0); /* Animation d'entrée des boutons */
+}
+.overlay-btn:hover {
+    background: #333;
+    color: white;
+}
+
+/* Stack Technique (Pillules) */
+.tech-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-pill {
+    background: #f8f9fa;
+    color: #555;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #eee;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tech-pill i {
+    margin-right: 5px;
+    color: #149f98; /* Couleur thème */
+}
+
+/* Bouton du bas */
+.transition-btn {
+    transition: all 0.3s ease;
+}
+.transition-btn:hover {
+    background-color: #149f98;
+    border-color: #149f98;
+    color: white;
+    transform: scale(1.02);
+}
+
+/* Utilisation de la couleur thème */
+.tech-pill i {
+    margin-right: 5px;
+    color: #149f98; /* C'est votre couleur d'accent */
+}
+
+.transition-btn:hover {
+    background-color: #149f98;
+    border-color: #149f98;
+    color: white;
+}
 /* Le conteneur principal (position relative pour les points absolus) */
 .timeline-container {
     position: relative;
@@ -61,6 +207,7 @@ html {
     position: relative;
     margin-left: 20px; /* Décalage pour laisser la place au point/ligne */
     padding-left: 10px;
+    border-left: 1px solid #eee;
 }
 
 /* Animation et Style au survol (UX Accrocheur) */

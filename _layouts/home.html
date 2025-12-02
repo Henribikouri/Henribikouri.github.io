@@ -121,7 +121,7 @@ layout: default
             <ul class="list-unstyled mt-2 ml-3">
               {% for highlight in exp.highlights %}
               <li style="margin-bottom: 5px;">
-                <i class="fas fa-dot-circle mr-2" style="color: #149f98; font-size: 0.85em;"></i>
+                <i class="fas fa-chevron-circle-right mr-2" style="color: #149f98; font-size: 0.85em;"></i>
                 {{ highlight }}
               </li>
               {% endfor %}
@@ -209,24 +209,72 @@ layout: default
         </div>
         </div>
   {% elsif section.name == "Projets" %}
-  <div class="tab-pane {% unless section.first %}fade{% endunless %} overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-    <p><i>{{section.description}}</i></p>
-    {% for projets in site.data.projets %}
-    <div class="media mt-2">
-      <a href="{{ projets.link }}"><img src="{{ projets.image }}" class="mr-3 mb-2 img-thumbnail border-0" alt="..."></a>
-      <div class="media-body">
-        <h5 class="mt-0"><a href="{{ projets.link }}" class="highlighted">{{ projets.name }}</a></h5>
-        {{ projets.description }}
-        {% if projets.tech %}
-        <h6><mark><u>Technologies</u></mark></h6>
-        {% for tech in projets.tech %}
-        <span class="badge badge-secondary mr-1" style="background-color:{{ theme.projects-color }};">{{ tech }}</span>
-        {% endfor %}
-        {% endif %}
-      </div>
+<div class="tab-pane {% unless section.first %}fade{% endunless %} overflow-hidden" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
+    
+    <div class="text-center my-4">
+        <p class="lead" style="font-family: {{ theme.font }}; color: #555;">
+            <i class="fas fa-laptop-code mr-2 text-primary"></i> {{ section.description }}
+        </p>
     </div>
-    {% endfor %}
-  </div>
+
+    <div class="row">
+        {% for projet in site.data.projets %}
+        {% assign delay = forloop.index | times: 150 %}
+        
+        <div class="col-lg-4 col-md-6 mb-5 animate__animated animate__fadeInUp" style="animation-delay: {{ delay }}ms;">
+            <div class="project-card-pro h-100">
+                
+                <div class="card-img-wrapper">
+                    <img src="{{ projet.image }}" alt="{{ projet.name }}" loading="lazy" width="400" height="200" class="project-img">
+                    <div class="project-overlay">
+                        <a href="{{ projet.github }}" target="_blank" class="overlay-btn" title="Voir le Code">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        {% if projet.demo %}
+                        <a href="{{ projet.demo }}" target="_blank" class="overlay-btn" title="Voir la Démo">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                    <span class="status-badge badge badge-{{ projet.status_color | default: 'primary' }}">
+                        {{ projet.status }}
+                    </span>
+                </div>
+
+                <div class="card-body p-4 position-relative">
+                    <small class="text-muted d-block mb-2 font-weight-bold">
+                        <i class="far fa-clock mr-1"></i> {{ projet.date }}
+                    </small>
+
+                    <h5 class="card-title font-weight-bold mb-3">
+                        {{ projet.name }}
+                    </h5>
+
+                    <p class="card-text text-muted mb-4" style="font-size: 0.95rem; line-height: 1.6;">
+                        {{ projet.description | truncate: 100 }}
+                    </p>
+
+                    <div class="tech-stack-container">
+                        {% for tech in projet.tech %}
+                        <span class="tech-pill" title="{{ tech.name }}">
+                            <i class="{{ tech.icon }}"></i> {{ tech.name }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="card-footer bg-white border-0 p-4 pt-0">
+                    <a href="{{ projet.github }}" target="_blank" class="btn btn-block btn-outline-dark font-weight-bold rounded-pill shadow-sm transition-btn">
+                        <i class="fab fa-github mr-2"></i> Inspecter le Code
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
 </div>
 {% else %}
 <div class="tab-pane {% unless section.first %}fade{% endunless %} overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
@@ -303,4 +351,15 @@ $(document).ready(function() {
             menu.classList.add('d-none');
         }
     }
+</script> -->
+<!-- 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".project-card-pro"), {
+        max: 15,              /* Angle max d'inclinaison */
+        speed: 400,           /* Vitesse de la transition */
+        glare: true,          /* Ajoute un reflet lumineux */
+        "max-glare": 0.3,     /* Intensité du reflet (0 à 1) */
+        scale: 1.05           /* Léger zoom global de la carte */
+    });
 </script> -->

@@ -1,47 +1,69 @@
-- name: Project 1
-  id: project1
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-  date: true
-  link: https://example.com
-  image:  http://placehold.it/100x100
-  tech: 
-    - python
+- name: Système de Détection d'Intrusion
+  description: Une solution basée sur l'IA pour analyser le trafic réseau en temps réel et bloquer les anomalies.
+  image: assets/img/projets/domo.png # Mettez une vraie image ici
+  status: Terminé # Nouveau !
+  status_color: success # success (vert), warning (jaune), info (bleu)
+  date: Oct 2023
+  tech:
+    - name: Python
+      icon: fab fa-python
+    - name: TensorFlow
+      icon: fas fa-brain
+    - name: Docker
+      icon: fab fa-docker
+  github: https://github.com/Henribikouri/mon-repo
+  demo: https://mon-site-demo.com # Optionnel
+  
 
 
-- name: Project 2
-  id: project2
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
-  date: true
-  link: https://example.com
-  image: http://placehold.it/100x100
-  tech: 
-    - c++
+- name: Système de Détection d'Intrusion
+  description: Une solution basée sur l'IA pour analyser le trafic réseau en temps réel et bloquer les anomalies.
+  image: /assets/img/projets/RV.jpg # Mettez une vraie image ici
+  status: Terminé # Nouveau !
+  status_color: success # success (vert), warning (jaune), info (bleu)
+  date: Oct 2023
+  tech:
+    - name: Python
+      icon: fab fa-python
+    - name: TensorFlow
+      icon: fas fa-brain
+    - name: Docker
+      icon: fab fa-docker
+  github: https://github.com/Henribikouri/mon-repo
+  demo: https://mon-site-demo.com # Optionnel
 
-- name: Project 3
-  id: project3
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
-  date: true
-  link: https://example.com
-  image:  http://placehold.it/100x100
-  tech: 
-    - Java
-    - Maven
-    - Jenkins
 
-- name: Project 4
-  id: project4
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 0
-  date: true
-  link: https://example.com
-  image: http://placehold.it/100x100
-  tech: 
-    - Sonarcube
-    - Java
+- name: Système de Détection d'Intrusion
+  description: Une solution basé
+  image: assets/img/projets/consul.jpg  # Mettez une vraie image ici
+  status: Terminé # Nouveau !
+  status_color: success # success (vert), warning (jaune), info (bleu)
+  date: Oct 2023
+  tech:
+    - name: Python
+      icon: fab fa-python
+    - name: TensorFlow
+      icon: fas fa-brain
+    - name: Docker
+      icon: fab fa-docker
+  github: https://github.com/Henribikouri/mon-repo
+  demo: https://mon-site-demo.com # Optionnel
+  theme_color: "#149f98" 
+  secondary_color: "#ffc107"
+
+
+- name: Système de Détection d'Intrusion
+  description: Une solution basée sur l'IA pour analyser le trafic réseau en temps réel et bloquer les anomalies.
+  image: assets/img/projects/security.jpg # Mettez une vraie image ici
+  status: Terminé # Nouveau !
+  status_color: success # success (vert), warning (jaune), info (bleu)
+  date: Oct 2023
+  tech:
+    - name: Python
+      icon: fab fa-python
+    - name: TensorFlow
+      icon: fas fa-brain
+    - name: Docker
+      icon: fab fa-docker
+  github: https://github.com/Henribikouri/mon-repo
+  demo: https://mon-site-demo.com # Optionnel
