@@ -38,8 +38,8 @@
   icon_type: fas fa-lock # <--- NOUVEAU: Icône Font Awesome pour la catégorie (ex: cadenas pour Sécurité)
   highlights:
     - Mise en place d'un Systeme de suivi des Affaires Juridiques et du contentieux.
-    - Analyse des besoins et conception d'une architecture de donnees ( Cahier de charges ci-dessous).
-    - Intervention a la direction generale et salle d'archivage numerique ( + 7 Unites de la DSI  ).
+    - Analyse des besoins et conception d'une architecture de données ( Cahier de charges ci-dessous).
+    - Intervention à la direction générale et salle d'archivage numérique ( + 7 Unités de la DSI  ).
   
   doc_link1: /assets/pdf/CDC - DAJC V1.0.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
   doc_text1: Voir (PDF) # <
