@@ -24,6 +24,8 @@ html {
 
 /* La Carte Principale */
 .project-card-pro {
+    display: flex;
+    flex-direction: column;
     background: #fff;
     border-radius: 15px; /* Arrondi moderne */
     overflow: hidden;
@@ -34,6 +36,23 @@ html {
     top: 0;
     /* On renforce légèrement l'ombre pour la faire flotter du fond #fafafa */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.project-card-pro .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* C'est la clé : ça force le corps à occuper tout l'espace vertical libre */
+}
+.project-card-pro .card-text {
+    /* Coupe le texte proprement après 3 ou 4 lignes et met des "..." */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Nombre de lignes max */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem; /* Espace garanti sous le texte */
+}
+
+.project-card-pro .card-footer {
+    margin-top: 0; /* Pas de marge parasite */
 }
 
 /* Interaction au Survol de la Carte */
@@ -125,6 +144,9 @@ html {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: auto; /* Cela pousse ce bloc tout en bas du card-body */
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.05); /*
 }
 
 .tech-pill {
