@@ -1,3 +1,33 @@
+
+- title: Projet Sélection  
+  company: l'X
+  company_url: https://www.polytechnique.edu/en   # <--- NOUVELLE CLÉ À AJOUTER
+  domain: Reseaux et Sécurité
+  logo_url: /assets/img/icons/logopo.png # <--- NOUVEAU: Chemin vers votre logo
+  location: À distance, Paris
+  period: Nov - Dec. 2025
+  icon_type: fas fa-code-branch # <--- NOUVEAU: Icône Font Awesome pour la catégorie (ex: cadenas pour Sécurité)
+  highlights:
+    - Conception et simulation d'un scenario de domotique et sauvegarde des traces reseaux.
+    - Preparation d'un dataset afin d'analyser à l'aide du machine learning les comportements reseaux.
+    - Classifier chaque trafic comme appartenant à une application donnée de la maison connectée .
+  
+  doc_link1: /assets/pdf/Simulation et préparation de traces d’un réseau domestique.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_text1: Sujet (PDF)
+  doc_link2: /assets/pdf/Rapport_hBIKOURI.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_text2: Rapport (PDF)
+
+  technologies:
+  - name: ns3
+    url: https://www.nsnam.org/
+  - name: python  
+    url: https://www.python.org/
+  - name: c++
+    url: https://isocpp.org/
+
+
+
+
 - title: Stage pre-ingenieur
   company: CRTV
   company_url: https://crtv.cm # <--- NOUVELLE CLÉ À AJOUTER
@@ -11,8 +41,8 @@
     - Analyse des besoins et conception d'une architecture de donnees ( Cahier de charges ci-dessous).
     - Intervention a la direction generale et salle d'archivage numerique ( + 7 Unites de la DSI  ).
   
-  doc_link: /assets/pdf/CDC - DAJC V1.0.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
-  doc_text: Voir (PDF) # <
+  doc_link1: /assets/pdf/CDC - DAJC V1.0.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_text1: Voir (PDF) # <
 
   technologies:
   - name: Astah 
@@ -36,8 +66,8 @@
     - Conçu pour prendre en charges les femmes enceintes vivantes dans les zonnes rurales .
     - Configuration de la gestion des rôles  ( Agent communautaire, patiente et Docteur).
   
-  doc_link: /assets/pdf/Memoire_BIKOURI_L3.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
-  doc_text: Memoire (PDF) # <
+  doc_link1: /assets/pdf/Memoire_BIKOURI_L3.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_text1: Memoire (PDF) # <
 
   slides_link: /assets/pdf/PRESENTATION_BIKOURI.pdf # <--- NOUVELLE CLÉ 1
   slides_text: Diapositives  # <--- NOUVELLE CLÉ 2
@@ -51,3 +81,26 @@
     url: https://www.microsoft.com/fr-fr/microsoft-365/visio/
 
 
+
+
+- title: Bourse d'excellence 
+  company: Istia
+  company_url: https://www.facebook.com/ISTIA.AFRIQUE/  # <--- NOUVELLE CLÉ À AJOUTER
+  domain: Programmation Web
+  logo_url: /assets/img/icons/logoistia.png # <--- NOUVEAU: Chemin vers votre logo
+  location: Douala, Cameroun
+  period: Juillet - Sept. 2017
+  icon_type: fas fa-lock # <--- NOUVEAU: Icône Font Awesome pour la catégorie (ex: cadenas pour Sécurité)
+  highlights:
+    - Bourse d'excellence pour la meilleure performance academique en Programmation Web.
+    - Conception d'un site e-commerce realiser durant cette formation boursiere.
+  
+  
+  doc_link1: /assets/pdf/CDC - DAJC.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_text1: Certificat  # <
+
+  technologies:
+  - name: html
+    url: https://developer.mozilla.org/fr/docs/Web/HTML
+  - name: css
+    url: https://developer.mozilla.org/fr/docs/Web/CSS  

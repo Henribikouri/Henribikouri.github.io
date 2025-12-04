@@ -126,9 +126,14 @@ layout: default
               </li>
               {% endfor %}
               <p class="mt-3 mb-2">
-                {% if exp.doc_link %}
-                <a href="{{ exp.doc_link }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-                  <i class="fas fa-file-pdf mr-2"></i> {{ exp.doc_text | default: "Documentation" }}
+                {% if exp.doc_link1 %}
+                <a href="{{ exp.doc_link1 }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                  <i class="fas fa-file-pdf mr-2"></i> {{ exp.doc_text1 | default: "Documentation" }}
+                </a>
+                {% endif %}
+                {% if exp.doc_link2 %}
+                <a href="{{ exp.doc_link2 }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                  <i class="fas fa-file-pdf mr-2"></i> {{ exp.doc_text2 | default: "Documentation" }}
                 </a>
                 {% endif %}
                 {% if exp.slides_link %}

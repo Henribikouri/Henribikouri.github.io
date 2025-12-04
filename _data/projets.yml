@@ -6,7 +6,7 @@
   date: Oct 2023
   tech:
     - name: Python
-      icon: fab fa-python
+      icon: fab fa-python     
     - name: TensorFlow
       icon: fas fa-brain
     - name: Docker
