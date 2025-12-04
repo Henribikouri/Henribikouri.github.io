@@ -9,6 +9,115 @@ html {
     position: relative;
     background-color: #fafafa;
   }
+
+  /* --- SECTION CONTACT : LE HUB --- */
+
+/* 1. Cartes d'Information (Gauche) */
+.contact-action-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.contact-action-card:hover {
+    transform: translateX(10px); /* Léger décalage vers la droite */
+    box-shadow: 0 10px 20px rgba(20, 159, 152, 0.15) !important; /* Ombre colorée */
+    border-color: #149f98;
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #149f98, #0e756f); /* Dégradé Thème */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(20, 159, 152, 0.3);
+}
+
+/* Bouton Copier */
+.copy-btn {
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+.copy-btn:hover {
+    opacity: 1;
+    background-color: #e2e6ea;
+    color: #149f98;
+}
+
+/* 2. Cartes Réseaux Sociaux (Droite) */
+.social-card {
+    border-radius: 15px;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Effet de brillance au survol */
+.social-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    z-index: -1;
+}
+
+.social-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Couleurs Spécifiques des Réseaux */
+.linkedin-card {
+    background: linear-gradient(135deg, #0077b5, #005582);
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3);
+}
+
+.github-card {
+    background: linear-gradient(135deg, #333, #1a1a1a);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.twitter-card {
+    background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+    box-shadow: 0 5px 15px rgba(29, 161, 242, 0.3);
+}
+
+.resume-card {
+    background: linear-gradient(135deg, #149f98, #0e756f); /* Votre couleur thème */
+    box-shadow: 0 5px 15px rgba(20, 159, 152, 0.3);
+}
+
+/* --- MODAL DE CONTACT STYLISÉ (Jolie Superposition) --- */
+.modal-content-custom {
+    border-radius: 15px;
+    /* Ombre subtile pour donner un effet de "flottaison" */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+}
+
+.modal-header {
+    border-bottom: 1px solid #eee;
+}
+
+.modal-body .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.2s;
+}
+
+.modal-body .form-control:focus {
+    border-color: #149f98; /* Couleur d'accent au focus */
+    box-shadow: 0 0 0 0.2rem rgba(20, 159, 152, 0.25);
+}
+
+.message-btn {
+    opacity: 1 !important; /* Pour s'assurer que le bouton est visible */
+}
   
   /* --- Pour la navigation principale (navbar) --- */
 

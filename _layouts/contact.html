@@ -1,50 +1,244 @@
 ---
 layout: page
-permalink: contact.html
-title: Contact Me
-header-img:  
-last-updated: 2020-10-30 5:55 PM
+permalink: /contact.html
+title: Contact
+header-img: 
 ---
-{% assign theme = site.data.themes[site.ui_theme] %}
-<div class="blogcard card-2 mb-4 mt-4" style="width: 100%;">
-  <div class="card-body">
-    <h1 class="card-title text-center" style="font-size:{{ theme.post-title-size }};font-weight:{{ theme.post-font-weight }};">{{ page.title }}</h1>
-    <p>{{ content | markdownify }} </p>
-    <!-- Target -->
-    {% if page.pgp %}
-    <input id="foo" style="width:50%;" class="text-muted" value="{{ site.pgp-key }}">
-    <!-- Trigger -->
-    <button class="btn" data-clipboard-target="#foo">
-        <i class="far fa-copy" alt="Copy PGP clipboard"></i>
-        <span style="font-size:14px;">Copy</span>
-    </button>
-    {% endif %}
-  </div>
+
+<div class="container my-5">
+    <div class="row align-items-center">
+        
+        <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="contact-intro animate__animated animate__fadeInLeft">
+                <h2 class="font-weight-bold mb-3" style="color: #333;">
+                    Prêt à <span style="color: #149f98;">collaborer</span> ?
+                </h2>
+                <p class="lead text-muted mb-5">
+                    Que ce soit pour une opportunité technique, un projet innovant ou simplement pour échanger sur la Tech, ma boîte de réception est toujours ouverte.
+                </p>
+
+                <div class="contact-action-card p-4 shadow-sm mb-4">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-box mr-3">
+                            <i class="fas fa-envelope-open-text fa-lg text-white"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0 text-dark font-weight-bold">Email Direct</h6>
+                            <p class="mb-0 text-muted small">{{ site.email }}</p>
+                        </div>
+                        <button class="btn btn-sm btn-light rounded-circle message-btn mr-2" data-toggle="modal" data-target="#contactModal" title="Envoyer un message">
+                          <i class="fas fa-paper-plane" style="color: #149f98;"></i>
+                        </button>
+                        <button class="btn btn-sm btn-light rounded-circle copy-btn" data-clipboard-text="{{ site.email }}" title="Copier">
+                            <i class="far fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="contact-action-card p-4 shadow-sm">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-box mr-3">
+                            <i class="fas fa-map-marker-alt fa-lg text-white"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 text-dark font-weight-bold">Localisation</h6>
+                            <p class="mb-0 text-muted small">Yaoundé, Cameroun</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="text-decoration-none">
+                        <div class="social-card linkedin-card h-100 p-4 text-center">
+                            <i class="fab fa-linkedin-in fa-3x mb-3"></i>
+                            <h5 class="font-weight-bold">LinkedIn</h5>
+                            <span class="btn btn-sm btn-outline-light rounded-pill mt-2">Connecter</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <a href="https://github.com/{{ site.github }}" target="_blank" class="text-decoration-none">
+                        <div class="social-card github-card h-100 p-4 text-center">
+                            <i class="fab fa-github fa-3x mb-3"></i>
+                            <h5 class="font-weight-bold">GitHub</h5>
+                            <span class="btn btn-sm btn-outline-light rounded-pill mt-2">Suivre</span>
+                        </div>
+                    </a>
+                </div>
+
+                 <div class="col-md-6 mb-4">
+                    <a href="/assets/pdf/CV_HENRI_BIKOURI.pdf" class="text-decoration-none">
+                        <div class="social-card resume-card h-100 p-4 text-center">
+                            <i class="fas fa-file-download fa-3x mb-3"></i>
+                            <h5 class="font-weight-bold">Mon CV</h5>
+                            <span class="btn btn-sm btn-outline-light rounded-pill mt-2">Télécharger</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="card shadow">
-  <div class="container">
-    <form name="contact" method="POST" data-netlify="true">
-      <div class="mb-3 mt-5">
-        <input type="name" placeholder="Your Name" name="name" class="form-control" id="inputForName"/>
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-content-custom">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold" id="contactModalTitle"><i class="fas fa-rocket mr-2" style="color: #149f98;"></i> Démarrer la Discussion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="mb-3">
-        <textarea type="message" placeholder="Your Message" name="message" class="form-control" id="inputforMessage"></textarea>
-      </div>
-      <div class="mb-3">
-        <input type="email" placeholder="Your Email" name="email" class="form-control" id="inputforEmail">
-      </div>
-      <button type="submit" class="btn mb-4" style="background-color:{{theme.default-button-color}};">Submit</button>
-    </form>
+      <form id="ajaxContactForm" action="https://formspree.io/f/xzznvzdj" method="POST">
+        <div class="modal-body">
+            <p class="text-muted small">
+                Envoyez un message direct. Je vous répondrai dans les plus brefs délais.
+            </p>
+            <div class="form-group mb-3">
+                <input type="text" name="name" class="form-control" placeholder="Votre Nom Complet *" required>
+            </div>
+            <div class="form-group mb-3">
+                <input type="email" name="_replyto" class="form-control" placeholder="Votre Adresse Email *" required>
+            </div>
+            <div class="form-group mb-3">
+                <textarea name="message" class="form-control" rows="5" placeholder="Votre Message Détaillé *" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="Nouveau message de votre Portfolio (Modal)">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+          <button type="submit" class="btn btn-primary" style="background-color: #149f98; border-color: #149f98;">Envoyer le Message</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
+<div id="formSuccessMessage" class="mt-4" style="display: none;">
 
+</div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.copy-btn');
+    clipboard.on('success', function(e) {
+        var originalIcon = e.trigger.innerHTML;
+        e.trigger.innerHTML = '<i class="fas fa-check text-success"></i>';
+        setTimeout(function() { e.trigger.innerHTML = originalIcon; }, 2000);
+        e.clearSelection();
+    });
+</script>
 
+<style>
+
+  /* --- MODAL DE CONTACT STYLISÉ (Jolie Superposition) --- */
+.modal-content-custom {
+    border-radius: 15px;
+    /* Ombre subtile pour donner un effet de "flottaison" */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+}
+
+.modal-header {
+    border-bottom: 1px solid #eee;
+}
+
+.modal-body .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.2s;
+}
+
+.modal-body .form-control:focus {
+    border-color: #149f98; /* Couleur d'accent au focus */
+    box-shadow: 0 0 0 0.2rem rgba(20, 159, 152, 0.25);
+}
+
+.message-btn {
+    opacity: 1 !important; /* Pour s'assurer que le bouton est visible */
+}
+</style>
 
 <script>
-function startClippy(){
-    new ClipboardJS('.btn');
-}
-window.onload = startClippy;
+    const form = document.getElementById('ajaxContactForm');
+    const formMessagePlaceholder = document.getElementById('formSuccessMessage');
+    const contactModal = $('#contactModal'); // Nécessite jQuery pour manipuler la modale
+
+    // Vérification que le formulaire existe
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault(); // Stoppe la redirection de la page
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            // État d'envoi (Feedback utilisateur immédiat)
+            submitButton.disabled = true;
+            submitButton.textContent = 'Envoi...';
+
+            const formData = new FormData(form);
+            const formUrl = form.getAttribute('action');
+
+            try {
+                const response = await fetch(formUrl, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        // Crucial pour que Formspree renvoie du JSON et non une redirection HTML
+                        'Accept': 'application/json' 
+                    }
+                });
+
+                if (response.ok) {
+                    // 1. Fermer la Modale
+                    contactModal.modal('hide');
+                    
+                    // 2. Afficher le Message de Succès sur la page
+                    formMessagePlaceholder.style.display = 'block';
+                    formMessagePlaceholder.innerHTML = `
+                        <div class="alert alert-success border-left-success" role="alert">
+                            <h4 class="alert-heading"><i class="fas fa-check-circle mr-2"></i> Message Envoyé avec Succès !</h4>
+                            <p>Merci pour votre message ! Je vous réponds dans les plus brefs délais.</p>
+                        </div>
+                    `;
+                    
+                    // 3. Réinitialiser le formulaire
+                    form.reset();
+
+                    // 4. Masquer le message de succès après 5 secondes
+                    setTimeout(() => {
+                        formMessagePlaceholder.style.display = 'none';
+                    }, 5000);
+                } else {
+                    // Gestion des erreurs
+                    const data = await response.json();
+                    let errorMsg = data.errors ? data.errors.map(err => err.message).join(', ') : 'Une erreur est survenue lors de l\'envoi.';
+                    
+                    formMessagePlaceholder.style.display = 'block';
+                    formMessagePlaceholder.innerHTML = `
+                        <div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading"><i class="fas fa-times-circle mr-2"></i> Erreur d'Envoi</h4>
+                            <p>${errorMsg}</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                // Erreur réseau
+                 formMessagePlaceholder.style.display = 'block';
+                 formMessagePlaceholder.innerHTML = `
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading"><i class="fas fa-times-circle mr-2"></i> Erreur Réseau</h4>
+                        <p>Impossible de contacter le service d'envoi. Veuillez réessayer plus tard.</p>
+                    </div>
+                `;
+            } finally {
+                // Rétablir le bouton quoi qu'il arrive
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        });
+    }
 </script>
