@@ -1,16 +1,16 @@
 <p align="center">
-    <h1 align="center">HENRI BIKOURI - PORTFOLIO TECHNIQUE & DEVOPS</h1>
+    <h1 align="center">HENRI BIKOURI - SITE WEB PORTFOLIO </h1>
     <p align="center">
-        Un portfolio personnel moderne, développé pour présenter l'expertise en Ingénierie et DevOps.
+        Un Site web portfolio personnel moderne, développé pour présenter l'expertise en Ingénierie et DevOps.
         <br />
         <a href="#propos"><strong>Découvrez le projet »</strong></a>
         <br />
         <br />
-        <a href="https://votre_domaine.com">Voir le site en ligne</a> 
+        <a href="https://henribikouri.github.io">Voir le site en ligne</a> 
         ·
         <a href="https://github.com/votre_username/votre_repo/issues">Signaler un Problème</a>
         ·
-        <a href="mailto:votre_email@exemple.com">Contacter Henri</a>
+        <a href="mailto:henri.bikouri@enspy-uy1.cm">Contacter Moi</a>
     </p>
 </p>
 
