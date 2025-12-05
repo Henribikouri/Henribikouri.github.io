@@ -26,6 +26,149 @@ html {
     border-color: #149f98;
 }
 
+/* --- SECTION A PROPOS : STYLE INGENIEUR --- */
+
+/* 1. Photo de Profil Dynamique */
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+}
+
+.profile-card {
+    position: relative;
+    z-index: 1;
+}
+
+.profile-img {
+    border-radius: 20px; /* Carré arrondi moderne, pas rond */
+    border: 4px solid white;
+    transition: transform 0.4s ease;
+    max-width: 300px;
+}
+
+.profile-wrapper:hover .profile-img {
+    transform: scale(1.02) rotate(-2deg);
+}
+
+/* Badges Flottants */
+.floating-badge {
+    position: absolute;
+    background: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: float 3s ease-in-out infinite;
+    z-index: 2;
+    color: #333;
+}
+
+.badge-top-right { top: 10%; right: -10px; animation-delay: 0s; }
+.badge-bottom-left { bottom: 10%; left: -10px; animation-delay: 1.5s; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 2. Terminal Window Style */
+.terminal-window {
+    background: #1e1e1e; /* Fond sombre IDE */
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Consolas', 'Monaco', monospace;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.terminal-header {
+    background: #2d2d2d;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: auto;
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.terminal-body {
+    padding: 25px;
+}
+
+.prompt {
+    color: #27c93f; /* Vert terminal */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.console-text {
+    color: #fff;
+    margin-bottom: 20px;
+    border-right: 2px solid rgba(255,255,255,0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    max-width: fit-content;
+}
+
+/* Animation Machine à écrire */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgba(255,255,255,0.75); }
+}
+
+/* 3. Accordéon Moderne (Déroulement de blocs) */
+.custom-accordion .card {
+    border-radius: 8px !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.custom-accordion .card-header {
+    padding: 0;
+    border-bottom: 0;
+}
+
+.custom-accordion .btn-link {
+    padding: 1.2rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.custom-accordion .btn-link:hover {
+    background: #f8f9fa;
+    color: #149f98 !important;
+}
+
+/* Rotation de la flèche quand ouvert */
+.custom-accordion .btn-link[aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+.custom-accordion .fa-chevron-down {
+    transition: transform 0.3s;
+}
+
 .icon-box {
     width: 50px;
     height: 50px;
