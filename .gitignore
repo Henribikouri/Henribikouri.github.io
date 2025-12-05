@@ -8,4 +8,4 @@ Gemfile.lock
 # Demo Site 
 /Demo
 *.sh 
-*.xml
+# *.xml
