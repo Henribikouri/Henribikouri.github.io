@@ -12,7 +12,7 @@ last-updated: 2025-12-05
         <div class="col-lg-5 mb-4 mb-lg-0 text-center">
             <div class="profile-wrapper animate__animated animate__fadeInLeft">
                 <div class="profile-card">
-                    <img src="{{ site.baseurl }}/assets/img/{{ site.profile_image }}" 
+                    <img src="{{ site.baseurl }}/assets/img/portrait2.png" 
                          alt="Henri Bikouri - Portrait Ingénieur" 
                          class="profile-img img-fluid shadow-lg"
                          style="border-radius: 20px; border: 4px solid white;">
