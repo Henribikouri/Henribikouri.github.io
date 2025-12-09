@@ -10,6 +10,238 @@ html {
     background-color: #fafafa;
   }
 
+  /* --- STYLE TUERIE POUR LES ARTICLES --- */
+
+/* 1. Typographie de lecture optimale */
+.article-content {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 1.15rem; /* Texte un peu plus grand */
+    line-height: 1.8;   /* Lignes aérées */
+    color: #2c3e50;
+}
+
+.article-content h2 {
+    font-weight: 800;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    position: relative;
+}
+
+/* Soulignement stylé pour les H2 */
+.article-content h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #149f98;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.article-content h3 {
+    font-weight: 700;
+    margin-top: 2.5rem;
+    color: #34495e;
+}
+
+/* 2. Citations "Insight" (Callouts) */
+.article-content blockquote {
+    background: #f8f9fa;
+    border-left: 6px solid #149f98; /* Votre couleur turquoise */
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    font-style: italic;
+    color: #555;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* 3. Code Blocks "MacBook Terminal Style" (LA TUERIE) */
+.article-content pre {
+    background: #1e1e1e; /* Fond sombre VS Code */
+    color: #dcdcdc;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem; /* Padding haut pour les boutons Mac */
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    overflow-x: auto;
+    margin: 2rem 0;
+    border: 1px solid #333;
+}
+
+/* Les 3 petits points Mac (Rouge, Jaune, Vert) */
+.article-content pre::before {
+    content: "• • •";
+    color: #ff5f56; /* Rouge */
+    font-size: 2rem;
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    line-height: 0;
+    letter-spacing: -3px; /* Rapproche les points */
+    text-shadow: 15px 0 0 #ffbd2e, 30px 0 0 #27c93f; /* Jaune et Vert via ombres */
+}
+
+/* Code inline (ex: `variable`) */
+.article-content code {
+    background-color: #eef2f5;
+    color: #e83e8c;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+/* Pour le code dans les blocs, on enlève le fond rose par défaut de Bootstrap */
+.article-content pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: 0.95em;
+}
+
+/* 4. Images dans l'article */
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+/* --- AMÉLIORATIONS RESPONSIVE (SMARTPHONES) --- */
+
+/* 1. Ciblage des petits écrans (jusqu'à 767px de large) */
+@media (max-width: 767px) {
+    
+    /* 1.1. Optimisation du Hero Header */
+    
+    .jumbotron-fluid {
+        min-height: 300px !important; /* Réduire la hauteur minimale du header */
+    }
+
+    .jumbotron-fluid .display-3 {
+        font-size: 2.2rem !important; /* Réduire la taille du titre principal sur mobile */
+        line-height: 1.3;
+    }
+
+    /* 1.2. Méta-données sous le titre (Auteur, Vues) */
+    .jumbotron-fluid .d-flex {
+        flex-direction: column; /* Empiler l'avatar et les infos */
+        align-items: flex-start !important;
+        text-align: left;
+    }
+    
+    .jumbotron-fluid .d-flex img {
+        margin-right: 0 !important;
+        margin-bottom: 10px; /* Ajouter de l'espace sous l'avatar */
+    }
+
+    .jumbotron-fluid .d-flex small {
+        display: block; /* Forcer les meta-infos à être sur plusieurs lignes */
+        margin-left: 0 !important;
+    }
+    
+    /* 1.3. Ajuster les badges catégories */
+    .jumbotron-fluid .badge {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.8rem !important;
+    }
+
+    /* 2. Optimisation du Corps de l'Article */
+
+    .article-content {
+        font-size: 1.05rem; /* Réduire légèrement la taille du texte pour le confort mobile */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .article-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .article-content h3 {
+        font-size: 1.5rem;
+    }
+
+    /* 3. Ajustement des éléments spécifiques (Code et Citations) */
+
+    /* Retirer les marges latérales des citations pour maximiser l'espace */
+    .article-content blockquote {
+        margin: 1.5rem 0 !important;
+        padding: 1rem 1rem 1rem 1.5rem !important;
+    }
+
+    /* Ajustement de l'ombre des blocs de code pour éviter l'overflow horizontal */
+    .article-content pre {
+        padding: 2.5rem 0.8rem 0.8rem 0.8rem; /* Moins de padding */
+        margin: 1.5rem -15px !important; /* Utiliser une marge négative pour aller jusqu'au bord si nécessaire */
+        border-radius: 0; /* Optionnel: enlever le border-radius aux bords pour les sites pleine largeur */
+        box-shadow: none;
+    }
+    
+    /* Décalage des 3 points Mac pour rester dans le bloc */
+    .article-content pre::before {
+        top: 0px; 
+        left: 8px;
+        font-size: 1.6rem;
+    }
+
+    /* 4. Gestion des images et tableaux */
+    .img-fluid, .article-content img {
+        margin: 1.5rem 0 !important;
+    }
+    
+}
+
+/* --- AMÉLIORATIONS RESPONSIVE (CARTES D'INDEX) --- */
+
+@media (max-width: 767px) {
+    
+    /* 1. Ajustement général des cartes sur mobile */
+    .card {
+        margin-bottom: 20px; /* Assurer un espacement vertical clair entre les cartes empilées */
+        border-radius: 8px !important;
+    }
+    
+    /* 2. Optimisation des images de cartes */
+    .card-img-top {
+        height: 180px !important; /* Réduire légèrement la hauteur de l'image de la carte */
+        object-fit: cover;
+    }
+
+    /* 3. Réduction de la taille du texte dans le corps de la carte */
+    .card-body {
+        padding: 1.25rem !important;
+    }
+
+    .card-title {
+        font-size: 1.2rem !important; /* Réduire la taille du titre */
+        line-height: 1.3;
+    }
+
+    .card-text {
+        font-size: 0.95rem; /* Rendre la description plus compacte */
+    }
+
+    /* 4. Compteur de Vues/Méta (si présent dans la carte) */
+    .card-footer small {
+        font-size: 0.7rem;
+    }
+}
+/* --- STYLE TUERIE POUR LES ARTICLES --- */
+
+/* .article-content {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 1.15rem; 
+    line-height: 1.8;   
+    color: #2c3e50;
+    text-align: justify; 
+} */
+
+
+/* ... le reste du CSS de l'article ... */
   /* --- SECTION CONTACT : LE HUB --- */
 
 /* 1. Cartes d'Information (Gauche) */
@@ -20,11 +252,41 @@ html {
     transition: all 0.3s ease;
 }
 
+/* Style pour l'effet de notification */
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+.animate__flash {
+    animation-name: flash;
+}
+.animate__infinite {
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+/* Style du Bouton de Réaction (J'aime/Cœur) */
+.reaction-btn {
+    transition: all 0.2s;
+    border: none;
+    font-weight: 500;
+}
+.reaction-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* Règle pour la photo de profil (à créer si elle n'existe pas) */
+.post-header img.rounded-circle {
+    object-fit: cover;
+}
 .contact-action-card:hover {
     transform: translateX(10px); /* Léger décalage vers la droite */
     box-shadow: 0 10px 20px rgba(20, 159, 152, 0.15) !important; /* Ombre colorée */
     border-color: #149f98;
 }
+
 
 /* --- SECTION A PROPOS : STYLE INGENIEUR --- */
 

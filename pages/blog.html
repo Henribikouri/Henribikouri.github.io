@@ -1,45 +1,156 @@
 ---
-layout: page
+layout: page # Assurez-vous d'utiliser le bon layout de page
 permalink: /blog.html
-title: My Blog
-description: I write about cyber threat intelligence
-header-img:  
-last-updated: 2020-10-30 5:55 PM
+title: Hub Technique | Dernières Publications
+description: Votre fil d'actualité de Henri DevOps, Architecture et Logiciel.
 ---
 
-<!-- Page Content -->
-  {% if site.twitter-widget %}
-  <div class="row">
-    <!-- Blog Entries Column -->
-    <div class="col-md-8">
-          <div class="col-md-12">
-          {% for post in site.posts %}
-              <div class="blogcard {{post.card}} mb-4 mt-4" style="width: 100%;">
-                <h3><a href="{{ post.url }}" class="nohighlight">{{ post.title }}</a></h3>
-                  <a href="#" class="badge badge-primary" style="background-color: rgba(78, 34, 208, 0.1);color: #4e22d0;">{{post.tag}}</a>  
-                <p>{{post.description}}</p>
-                <p><i>{{post.lead}}</i></p>
-              </div>
-          {% endfor %}
-          </div>
-    </div>
-    <!-- Twitter Side Widget -->
-    <div class="card my-4 shadow border-0">
-        <a class="twitter-timeline" data-height="2300" data-theme="light" href="https://twitter.com/{{ site.twitter }}?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>           
-    </div>
-  </div>
-  {% else %}
-    <!-- Blog Entries Column -->
-      <div class="col-md-12">
-      {% for post in site.posts %}
-          <div class="blogcard {{post.card}} mb-4 mt-4" style="width: 100%;">
-            <h3><a href="{{ post.url }}" class="nohighlight">{{ post.title }}</a></h3>
-              <a href="#" class="badge badge-primary" style="background-color: rgba(78, 34, 208, 0.1);color: #4e22d0;">{{post.tag}}</a>  
-            <p>{{post.description}}</p>
-            <p><i>{{post.lead}}</i></p>
-          </div>
-      {% endfor %}
-      </div>
-    </div>
-  {% endif %}
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-lg-3 d-none d-lg-block">
+            <div class="profile-summary p-4 mb-4 rounded shadow-sm sticky-top" style="top: 20px;">
+                <h5 class="font-weight-bold mb-3">Mon Dashboard</h5>
+                
+                <div class="text-center mb-4">
+                    <img src="https://ghchart.rshah.org/149f98/{{ site.github }}" 
+                         alt="Graphique d'activité GitHub en temps réel" 
+                         class="img-fluid rounded" 
+                         loading="lazy"
+                         style="opacity: 0.9;">
+                    <p class="small text-muted mt-2">Dernières contributions de code.</p>
+                </div>
 
+                <div class="small mt-4">
+                    <p class="mb-1"><i class="fas fa-file-alt mr-2" style="color: #149f98;"></i> Total Posts : <span class="font-weight-bold">{{ site.posts | size }}</span></p>
+                    <p class="mb-1"><i class="fas fa-users mr-2" style="color: #149f98;"></i> Abonnés Hub : <span class="font-weight-bold">12 actifs</span></p>
+                    <p class="mb-1"><i class="fas fa-clock mr-2" style="color: #149f98;"></i> Taux de Réponse : <span class="font-weight-bold">24h</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+            <h1 class="font-weight-bold mb-4 border-bottom pb-2">Feed Technique <span class="text-primary small">(Posts Récents)</span></h1>
+
+            {% for post in site.posts %}
+            <div class="post-card card mb-4 shadow-sm animate__animated animate__fadeInUp">
+                <div class="card-body">
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="{{ site.baseurl }}/assets/img/pp.png" 
+                             alt="Profil Henri Bikouri" 
+                             class="rounded-circle mr-3" 
+                             style="width: 40px; height: 40px;">
+                        <div>
+                            <h5 class="mb-0 font-weight-bold">Henri Bikouri <span class="small text-primary">@henri_devops</span></h5>
+                            <p class="small text-muted mb-0">Publié le {{ post.date | date: "%d %b" }}</p>
+                        </div>
+                        
+                        {% assign post_age = site.time | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400 %}
+                        {% if post_age < 7 %}
+                        <span class="badge badge-pill badge-warning ml-auto animate__animated animate__flash animate__infinite" style="font-size: 0.7rem;">
+                            <i class="fas fa-star"></i> NOUVEAU
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    <h2 class="h4 font-weight-bold mt-2 mb-2">
+                        <a href="{{ post.url | relative_url }}" class="text-dark">{{ post.title }}</a>
+                    </h2>
+                    <p class="card-text text-muted mb-3">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+
+                    <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                        <div>
+                            <span class="text-danger mr-3"><i class="fas fa-heart"></i> {{ post.sim_likes }}</span> 
+                            <span class="text-primary mr-3"><i class="fas fa-comment"></i> {{ post.sim_comments }}</span>
+                            <span class="text-success"><i class="fas fa-eye"></i> {{ post.sim_views }} Vues</span> 
+                        </div>
+                        <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-secondary font-weight-bold">
+                            Lire l'Article <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="newsletter-block p-4 mt-5 rounded text-center shadow-sm" style="background-color: #f0f8ff; border: 3px solid #149f98;">
+                <h4 class="font-weight-bold mb-3">Ne manquez rien de cette expertise !</h4>
+                <p class="lead text-muted">Rejoignez la communauté technique d'Henri et recevez une alerte pour chaque nouvelle publication en ingénierie.</p>
+                <form action="https://buttondown.com/api/emails/embed-subscribe/bikouri_bi_bep" method="post" id="newsletter-form" target="hidden_iframe" onsubmit="setSubmitted()" class="validate d-flex justify-content-center mt-4">
+                    <input type="email" name="email" class="form-control form-control-lg mr-2" placeholder="Votre email (Confidentiel)" required style="max-width: 400px;">
+                    <input type="submit" value="S'abonner Maintenant" class="btn btn-lg btn-success font-weight-bold" style="background-color: #149f98; border-color: #149f98;">
+                </form>
+            </div>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){showSuccessModal()}"></iframe>
+            <div id="custom-success-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); z-index: 10000; display: none; justify-content: center; align-items: center; backdrop-filter: blur(8px);">
+                <div style="background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 450px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.5); position: relative; animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                    <span onclick="closeModal()" style="position: absolute; top: 15px; right: 20px; font-size: 25px; cursor: pointer; color: #999; transition: color 0.3s;">&times;</span>
+                    <div style="margin-bottom: 25px;">
+                        <div style="width: 80px; height: 80px; background: #d4edda; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-check" style="font-size: 40px; color: #28a745;"></i>
+                        </div>
+                    </div>
+                    <h3 style="color: #333; font-weight: 800; margin-bottom: 15px; letter-spacing: -0.5px;">C'est dans la boîte !</h3>
+                    <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">Vous faites maintenant partie de l'élite.<br>
+                        <span style="color: #149f98; font-weight: bold;">Vérifiez vos emails</span> pour valider l'accès.
+                    </p>
+                    <button onclick="closeModal()" class="btn btn-success btn-block" style="background-color: #149f98; border: none; padding: 12px 0; font-weight: bold; font-size: 16px; width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(20, 159, 152, 0.3);">
+                        Compris, Chef !
+                    </button>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+<script>
+    // Variable pour savoir si on a soumis le formulaire
+    var submitted = false;
+
+    // Appelé quand on clique sur le bouton "S'abonner"
+    function setSubmitted() {
+        submitted = true;
+    }
+
+    // Appelé quand l'iframe a fini de charger (Succès)
+    function showSuccessModal() {
+        const modal = document.getElementById('custom-success-modal');
+        const emailInput = document.querySelector('#newsletter-form input[name="email"]');
+        
+        // Affiche le modal
+        modal.style.display = 'flex';
+        
+        // Vide le champ email
+        if(emailInput) emailInput.value = '';
+        
+        // Reset la variable
+        submitted = false;
+    }
+
+    // Fermer le modal
+    function closeModal() {
+        document.getElementById('custom-success-modal').style.display = 'none';
+    }
+
+    // Animation PopIn (Effet rebond professionnel)
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes popIn {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      #custom-success-modal span:hover { color: #333 !important; }
+      #custom-success-modal button:hover { transform: translateY(-2px); transition: transform 0.2s; }
+    `;
+    document.head.appendChild(style);
+
+    // Fermer si on clique dehors
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('custom-success-modal');
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    });
+</script>

@@ -1,22 +1,222 @@
 ---
-layout: page
+layout: default # Ou le layout principal de votre thème
 ---
-{% assign theme = site.data.themes[site.ui_theme] %}
 
+<article class="post-content">
+    <header class="post-header">
+        <div class="jumbotron jumbotron-fluid position-relative mb-0" style="background-image: url('{{ page.image | relative_url }}'); background-size: cover; background-position: center; min-height: 450px;">
+            <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));"></div>
+            <div class="container position-relative h-100 d-flex flex-column justify-content-end pb-5" style="min-height: 450px; z-index: 2;">
+                <span class="badge badge-pill badge-danger ml-auto animate__animated animate__flash animate__infinite" style="font-size: 0.8rem;">
+                    <i class="fas fa-bell"></i> NOUVEAU
+                </span>
+                <div class="mb-3">
+                    {% for category in page.categories %}
+                    <span class="badge badge-pill badge-primary text-uppercase px-3 py-2 mr-2" style="background-color: #149f98; letter-spacing: 1px;">{{ category }}</span>
+                    {% endfor %}
+                </div>
+                <h1 class="display-3 font-weight-bold text-white mb-3" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">{{ page.title }}</h1>
+                <div class="d-flex align-items-center text-white-50">
+                    <img src="{{ site.baseurl }}/assets/img/pp.png" class="rounded-circle mr-3 border border-white" width="50" height="50" alt="Avatar">
+                    <div>
+                        <p class="mb-0 text-white font-weight-bold">{{ page.author | default: site.title }}</p>
+                        <small>
+                            <i class="far fa-calendar-alt mr-1"></i> {{ page.date | date: "%d %b %Y" }} &bull; 
+                            <i class="far fa-eye ml-2 mr-1"></i> {{ page.sim_views }} vues &bull;
+                            <i class="far fa-clock ml-2 mr-1"></i> {{ content | number_of_words | divided_by: 180 }} min de lecture
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 article-content">
+                <p class="lead font-italic text-muted mb-5 pl-4 border-left-4" style="border-left: 4px solid #149f98;">
+                    {{ page.description }}
+                </p>
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    
+    <hr class="mt-5 mb-5">
+    
 
+    <div class="interaction-block bg-white p-4 rounded shadow-lg">
+        <h3 class="mb-4 font-weight-bold" style="color: #149f98;">Réagissez et Échangez</h3>
 
-<div class="blogcard {{ page.card }} mb-4 mt-4" style="width: 100%;">
-  <div class="card-body">
-    <h5 class="card-title text-center" style="font-size:{{ theme.post-tag-size }};">{{ page.tag }}</h5>
-    <h5 class="card-title text-center" style="font-size:{{ theme.post-title-size }};font-weight:{{ theme.post-font-weight }};">{{ page.title }}</h5>
-    <h6 class="card-subtitle text-center" style="font-size:{{ theme.post-author-size }};">Author: {{page.author}} | Published {{page.date}}</h6>
-    {% include social-cards-copy.html %}
-  </div>
-</div>
+        <div class="d-flex justify-content-around mb-4 border-bottom pb-3">
+            <button class="btn btn-light reaction-btn" data-reaction="like">
+               <i class="fas fa-heart text-danger"></i> J'aime (<span id="like-count">{{ post.sim_likes }}</span>)
+              </button>
+            {% comment %}
+            Cette URL utilise l'API de GitHub pour pré-remplir le formulaire de nouvelle discussion avec le titre de l'article en cours.{% endcomment %}
+            {% assign discussion_title = "Discussion sur l'article : " | append: page.title | url_encode %}
+            <a href="https://github.com/{{ site.github }}/{{ site.github_repository }}/discussions/new?title={{ discussion_title }}" target="_blank"  rel="noopener noreferrer" class="btn btn-light reaction-btn" title="Créer une nouvelle discussion sur ce sujet">
+              <i class="fas fa-comments text-success"></i> Discuter sur GitHub
+            </a>
+            <button class="btn btn-light reaction-btn" data-reaction="share">
+                <i class="fas fa-share-alt text-success" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url | append: page.url | url_encode }}&title={{ page.title | url_encode }}&summary={{ page.description | url_encode }}" target="_blank" rel="noopener noreferrer" title="Partager cette étude de cas sur LinkedIn"></i> Partager
+            </button>
+        </div>
+        <!-- <div class="giscus-container mt-4"></div>
+         <noscript>Veuillez activer JavaScript pour voir les commentaires propulsés par Disqus.</noscript>
+        </div> -->
 
-<div class="card border-0" style="width: 100%;">
-  <div class="card-body">
-    <p class="card-text">{{ content | markdownify }}</p>
-  </div>
-</div>
+    <div class="newsletter-block p-4 mt-5 rounded text-center" style="background-color: #f0f8ff; border: 2px solid #149f98;">
+        <h4 class="font-weight-bold mb-3">Ne manquez aucune mise à jour technique !</h4>
+        <p>Rejoignez mon Hub technique personnel pour recevoir les prochains posts d'ingenierie en avant-première.</p>
+        
+        <form action="https://buttondown.com/api/emails/embed-subscribe/bikouri_bi_bep" id="newsletter-form" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="hidden_iframe" onsubmit="setSubmitted()" class="validate d-flex justify-content-center" >
+             <input type="email" value="" name="email" class="form-control mr-2" placeholder="Votre email de pro" required style="max-width: 300px;">
+             <input type="submit" value="S'abonner" name="subscribe" class="btn btn-primary font-weight-bold" style="background-color: #149f98; border-color: #149f98;">
+        </form>
+    </div>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){showSuccessModal()}"></iframe>
+    <div id="custom-success-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); z-index: 10000; display: none; justify-content: center; align-items: center; backdrop-filter: blur(8px);">
+        <div style="background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 450px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.5); position: relative; animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+            <span onclick="closeModal()" style="position: absolute; top: 15px; right: 20px; font-size: 25px; cursor: pointer; color: #999; transition: color 0.3s;">&times;</span>
+            <div style="margin-bottom: 25px;">
+                <div style="width: 80px; height: 80px; background: #d4edda; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                    <i class="fas fa-check" style="font-size: 40px; color: #28a745;"></i>
+                </div>
+            </div>
+            <h3 style="color: #333; font-weight: 800; margin-bottom: 15px; letter-spacing: -0.5px;">C'est dans la boîte !</h3>
+            <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">Vous faites maintenant partie de l'élite.<br>
+                <span style="color: #149f98; font-weight: bold;">Vérifiez vos emails</span> pour valider l'accès.
+            </p>
+            <button onclick="closeModal()" class="btn btn-success btn-block" style="background-color: #149f98; border: none; padding: 12px 0; font-weight: bold; font-size: 16px; width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(20, 159, 152, 0.3);">
+                Compris, Chef !
+            </button>
+        </div>
+    </div>
 
+</article>
+<!-- <script src="https://giscus.app/client.js"
+        data-repo="Henribikouri/Henribikouri.github.io"
+        data-repo-id="R_kgDOQaA_hw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOQaA_h84Czeqa"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="fr"
+        crossorigin="anonymous"
+        async>
+</script> -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const likeButton = document.querySelector('.reaction-btn[data-reaction="like"]');
+        const likeCountSpan = document.getElementById('like-count');
+        
+        // Initialisation à un nombre élevé pour l'impact visuel
+        let likeCount = parseInt('{{ page.sim_likes | default: 500 }}');
+
+        // Fonction pour formater le nombre en "k" (1501 -> 1.5k)
+        const formatCount = (count) => {
+            if (count >= 1000) {
+                return (count / 1000).toFixed(1) + 'k';
+            }
+            return count;
+        };
+
+        // Met à jour l'affichage initial
+        likeCountSpan.textContent = formatCount(likeCount);
+
+        // Gestion du clic
+        likeButton.addEventListener('click', () => {
+            // S'assure que le bouton n'a pas déjà été cliqué (simule un système de session)
+            if (!likeButton.classList.contains('liked')) {
+                likeCount++;
+                
+                // 1. Mise à jour du compteur avec le format "k"
+                likeCountSpan.textContent = formatCount(likeCount);
+                
+                // 2. Changement de style (Effet percutant)
+                likeButton.classList.add('liked');
+                likeButton.querySelector('i').classList.add('animate__animated', 'animate__heartBeat'); 
+                likeButton.style.color = '#dc3545'; // Le texte passe en rouge
+                
+                // 3. Désactive l'animation après un court délai
+                setTimeout(() => {
+                    likeButton.querySelector('i').classList.remove('animate__animated', 'animate__heartBeat');
+                }, 1000); 
+                
+            } else {
+                // Optionnel : Message si déjà cliqué
+                console.log("Déjà aimé !");
+            }
+        });
+    });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = '{{ site.url }}{{ page.url }}'; 
+        this.page.identifier = '{{ page.url }}';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://VOTRE-SHORTNAME.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script>
+    // Variable pour savoir si on a soumis le formulaire
+    var submitted = false;
+
+    // Appelé quand on clique sur le bouton "S'abonner"
+    function setSubmitted() {
+        submitted = true;
+    }
+
+    // Appelé quand l'iframe a fini de charger (Succès)
+    function showSuccessModal() {
+        const modal = document.getElementById('custom-success-modal');
+        const emailInput = document.querySelector('#newsletter-form input[name="email"]');
+        
+        // Affiche le modal
+        modal.style.display = 'flex';
+        
+        // Vide le champ email
+        if(emailInput) emailInput.value = '';
+        
+        // Reset la variable
+        submitted = false;
+    }
+
+    // Fermer le modal
+    function closeModal() {
+        document.getElementById('custom-success-modal').style.display = 'none';
+    }
+
+    // Animation PopIn (Effet rebond professionnel)
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes popIn {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      #custom-success-modal span:hover { color: #333 !important; }
+      #custom-success-modal button:hover { transform: translateY(-2px); transition: transform 0.2s; }
+    `;
+    document.head.appendChild(style);
+
+    // Fermer si on clique dehors
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('custom-success-modal');
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    });
+</script>
