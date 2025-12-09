@@ -13,7 +13,7 @@ sim_comments: "28"
 
 C'est l'histoire classique : on migre vers le Cloud pour la "flexibilité", et six mois plus tard, le directeur financier débarque dans le bureau des Ops avec une facture AWS qui a doublé.
 
-Kubernetes (K8s) est puissant, mais mal configuré, c'est un trou noir financier. Voici l'analyse post-mortem d'une optimisation que j'ai menée, faisant passer une facture mensuelle de 4500$ à 1800$.
+Kubernetes (K8s) est puissant, mais mal configuré, c'est un trou noir financier. Voici l'analyse post-mortem d'une optimisation que j'ai menée, faisant passer une facture mensuelle de 3 Milloins à 0.9 Milloin de FCFA.
 
 ## 1. Le Diagnostic : L'Over-Provisioning
 
@@ -35,13 +35,13 @@ Nos environnements de *Staging* et de *Dev* tournaient sur des instances On-Dema
 J'ai utilisé **AWS Node Termination Handler** pour gérer gracieusement les interruptions des Spots. Le cluster est devenu résilient au chaos, et drastiquement moins cher.
 
 
+<!-- ![Schéma d'architecture Kubernetes optimisé](https://medium.com/@extio/kubernetes-architecture-explained-5e9b406de5d1) -->
+<!-- <img src="https://medium.com/@extio/kubernetes-architecture-explained-5e9b406de5d1" alt="Schéma d'architecture Kubernetes" style="max-width: 100%; height: auto; display: block; margin: 20px auto;"> -->
 
-[Image of Kubernetes Cluster Architecture Diagram]
-
-
-## 3. Le Nettoyage des Zombies
+## 3. Le Nettoyage des Zombies 
 
 En scannant le cluster, j'ai trouvé :
+
 * Des volumes EBS orphelins (attachés à des pods morts depuis des mois).
 * Des Load Balancers non utilisés.
 
