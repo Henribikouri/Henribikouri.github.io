@@ -243,39 +243,6 @@ html {
     
 }
 
-/* --- AMÉLIORATIONS RESPONSIVE (SMARTPHONES) --- */
-
-@media (max-width: 767px) {
-
-    /* ... (Gardez les autres corrections responsive déjà faites) ... */
-
-    /* NOUVELLE RÈGLE DE SYMETRIE POUR LE CONTENU DE L'ARTICLE */
-    .container .row {
-        /* Assure que la ligne prend toute la largeur disponible sans marges négatives */
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-    
-    /* Appliquer un padding symétrique à la section de contenu */
-    .article-content {
-        padding-left: 15px !important; 
-        padding-right: 15px !important;
-        /* Force un padding égal à gauche et à droite pour l'ensemble du contenu */
-        
-        /* Ajustement de la largeur pour compenser le padding */
-        width: auto !important;
-        max-width: none !important;
-    }
-    
-    /* Corriger les blocs qui utilisaient des marges négatives */
-    .article-content pre {
-        margin-left: -15px !important; /* Pour coller au bord du container-fluid */
-        margin-right: -15px !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
-}
-
 /* --- AMÉLIORATIONS RESPONSIVE (CARTES D'INDEX) --- */
 
 @media (max-width: 767px) {
