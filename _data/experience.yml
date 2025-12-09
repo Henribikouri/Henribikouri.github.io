@@ -89,15 +89,18 @@
   domain: Programmation Web
   logo_url: /assets/img/icons/logoistia.png # <--- NOUVEAU: Chemin vers votre logo
   location: Douala, Cameroun
-  period: Juillet - Sept. 2017
+  period: Juillet - Sept. 2019
   icon_type: fas fa-lock # <--- NOUVEAU: Icône Font Awesome pour la catégorie (ex: cadenas pour Sécurité)
   highlights:
     - Bourse d'excellence pour la meilleure performance academique en Programmation Web.
     - Conception d'un site e-commerce realiser durant cette formation boursiere.
   
   
-  doc_link1: /assets/pdf/CDC - DAJC.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_link1: /assets/pdf/Certificat_instia.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
   doc_text1: Certificat  # <
+  doc_link2: /assets/pdf/bourse ime.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_text2: Bourse Ime 
+
 
   technologies:
   - name: html

@@ -110,37 +110,6 @@ html {
     margin: 2rem 0;
 }
 
-/* Dans assets/css/style.css */
-.article-content img {
-    max-width: 100%; /* L'image ne dépasse jamais la largeur de son conteneur */
-    height: auto;
-    /* ... autres styles ... */
-    display: block; /* Important pour le centrage et la gestion du flux */
-}
-
-/* --- 1. JUSTIFICATION GLOBALE DU CORPS DE L'ARTICLE --- */
-
-.article-content {
-    /* (Vos styles de typographie et de largeur ici) */
-    
-    /* Assurez-vous que l'ensemble du bloc est prêt pour la justification */
-    text-align: justify; /* Pour certains navigateurs */
-}
-
-/* Appliquer la justification aux paragraphes et aux listes */
-.article-content p, 
-.article-content ul, 
-.article-content ol, 
-.article-content li {
-    text-align: justify !important; /* Force la justification partout */
-    /* text-justify: inter-word; */ /* Optionnel: peut améliorer le rendu des espaces sur certains navigateurs */
-}
-
-/* Correction pour les citations (Blockquotes) */
-.article-content blockquote {
-    /* Les citations doivent généralement rester alignées à gauche */
-    text-align: left !important;
-}
 /* --- AMÉLIORATIONS RESPONSIVE (SMARTPHONES) --- */
 
 /* 1. Ciblage des petits écrans (jusqu'à 767px de large) */
@@ -187,23 +156,6 @@ html {
         padding-left: 15px;
         padding-right: 15px;
     }
-
-    /* --- CORRECTION FINALE DANS assets/css/style.css --- */
-
-.article-content {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-    font-size: 1.15rem; 
-    line-height: 1.8;   
-    color: #333333;
-
-    /* NOUVELLE LIMITE DE LARGEUR BASÉE SUR COL-LG-8 (env. 66%) */
-    width: 66.666667%; /* 8/12 = 66.666667% */
-    margin-left: auto;  /* Centre le bloc horizontalement */
-    margin-right: auto; /* Centre le bloc horizontalement */
-    
-    /* Le limiteur max-width est toujours une bonne pratique */
-    max-width: 850px; 
-}
 
     .article-content h2 {
         font-size: 1.8rem;
