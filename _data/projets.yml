@@ -54,7 +54,7 @@
 
 - name: Système de Détection d'Intrusion
   description: Une solution basée sur l'IA pour analyser le trafic réseau en temps réel et bloquer les anomalies.
-  image: assets/img/projects/security.jpg # Mettez une vraie image ici
+  image: assets/img/projets/RV.jpg # Mettez une vraie image ici
   status: Terminé # Nouveau !
   status_color: success # success (vert), warning (jaune), info (bleu)
   date: Oct 2023

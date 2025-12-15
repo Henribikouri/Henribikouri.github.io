@@ -36,7 +36,7 @@ J'ai utilisé **AWS Node Termination Handler** pour gérer gracieusement les int
 
 
 <!-- ![Schéma d'architecture Kubernetes optimisé](https://medium.com/@extio/kubernetes-architecture-explained-5e9b406de5d1) -->
-<!-- <img src="https://medium.com/@extio/kubernetes-architecture-explained-5e9b406de5d1" alt="Schéma d'architecture Kubernetes" style="max-width: 100%; height: auto; display: block; margin: 20px auto;"> -->
+<!-- <img src="{{ site.baseurl }}/assets/img/posts/blog-paris.png " alt="Schéma d'architecture Kubernetes" style="max-width: 100%; height: auto; display: block; margin: 20px auto;"> -->
 
 ## 3. Le Nettoyage des Zombies 
 

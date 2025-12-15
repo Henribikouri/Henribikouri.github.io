@@ -39,7 +39,7 @@ last-updated: 2025-12-05
                     </p>
                     <h2 class="font-weight-bold mb-3 text-white">Henri Bikouri</h2>
                     <p class="lead text-light opacity-75">
-                        {{ site.description }}
+                        Ingénieur en génie informatique à l'École Polytechnique de Yaoundé, spécialisé en intelligence artificielle, génie logiciel et cloud computing, aime egalement la virtualisation .
                     </p>
                     <hr style="border-color: rgba(255,255,255,0.1);">
                     <p class="text-light small mt-3">
