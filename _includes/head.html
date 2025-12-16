@@ -1,12 +1,55 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>{{ site.title }}</title>
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+<meta name="description" content="{{ site.description }}">
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta name="google-site-verification" content="{{ site.google-site-verification }}">
+
+<meta name="referrer" content="no-referrer">
+<meta name="format-detection" content="telephone={{ site.detectphone }}">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Courgette&family=Lobster&family=Pacifico&family=Yellowtail&family=Noto+Sans+JP:wght@400;900&family=Poppins:wght@500&family=Righteous&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/all.min.css"> 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> 
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/img/icons/favicon-32x32.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/img/icons/favicon-16x16.jpg">
+
+<meta property="og:url" content="{{ site.url }}">
+<meta property="og:title" content="{{ site.title}}">
+<meta property="og:image" content="{{ site.image }}">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/styles/monokai-sublime.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/bootstrap.bundle.min.js"></script>
 
-<meta name="description" content="{{ site.description }}">
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-tag }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.google-tag }}');   
+</script>
