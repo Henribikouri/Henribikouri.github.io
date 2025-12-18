@@ -1,69 +1,87 @@
-- name: Système de Détection d'Intrusion
-  description: Une solution basée sur l'IA pour analyser le trafic réseau en temps réel et bloquer les anomalies.
+
+- name: Ruches connectée
+  description: Application de ruches connectées pour le suivi optimal de l'apiculture.
+  image: assets/img/projets/ruches.png # Mettez une vraie image ici
+  status: Terminé # Nouveau !
+  status_color: success # success (vert), warning (jaune), info (bleu)
+  date: Dec 2025
+  tech:
+    - name: Angular
+      icon: fab fa-angular  
+    - name: python
+      icon: fab fa-python
+    - name: express.js
+      icon: fas fa-server
+  github: https://github.com/Henribikouri/ruches-connectees
+  demo: https://mon-site-demo.com # Optionnel
+
+
+- name: Système de domotique
+  description: Conception et simulation d'une maison connectée jusqu'à l'analyse des traces du reseau.
   image: assets/img/projets/domo.png # Mettez une vraie image ici
   status: Terminé # Nouveau !
   status_color: success # success (vert), warning (jaune), info (bleu)
-  date: Oct 2023
+  date: Nov 2025
   tech:
     - name: Python
       icon: fab fa-python     
-    - name: TensorFlow
-      icon: fas fa-brain
-    - name: Docker
-      icon: fab fa-docker
-  github: https://github.com/Henribikouri/mon-repo
+    - name: ns3
+      icon: fas fa-network-wired
+    - name: c++ 
+      icon: fab fa-cuttlefish
+  github: https://github.com/Henribikouri/Simulation_de_trace_d-un_reseau_domestique
   demo: https://mon-site-demo.com # Optionnel
   
 
 
-- name: Système de Détection d'Intrusion
-  description: Une solution basée sur l'IA pour analyser le trafic réseau en temps réel et bloquer les anomalies.
+- name: Immersion Virtuelle pour simulation Médicale en 3D
+  description: Application d'Interface-Homme-Machine  de réalité virtuelle pour la simulation médicale en 3D.
   image: /assets/img/projets/RV.jpg # Mettez une vraie image ici
   status: Terminé # Nouveau !
   status_color: success # success (vert), warning (jaune), info (bleu)
-  date: Oct 2023
+  date: Fev 2025
   tech:
-    - name: Python
-      icon: fab fa-python
-    - name: TensorFlow
-      icon: fas fa-brain
-    - name: Docker
-      icon: fab fa-docker
-  github: https://github.com/Henribikouri/mon-repo
+    - name: blender
+      icon: fas fa-cube
+    - name: Three.js
+      icon: fas fa-cubes
+    - name: makehuman
+      icon: fas fa-user
+  github: https://github.com/Henribikouri/IHM_IMMERSIVE
   demo: https://mon-site-demo.com # Optionnel
 
 
-- name: Système de Détection d'Intrusion
-  description: Une solution basé
+- name: Baby & MotherCare
+  description: Application web de suivi de grossesse et de soins pour les femmes enceintes en zone rurale.
   image: assets/img/projets/consul.jpg  # Mettez une vraie image ici
   status: Terminé # Nouveau !
   status_color: success # success (vert), warning (jaune), info (bleu)
-  date: Oct 2023
+  date: Oct 2024
   tech:
-    - name: Python
-      icon: fab fa-python
-    - name: TensorFlow
-      icon: fas fa-brain
-    - name: Docker
-      icon: fab fa-docker
-  github: https://github.com/Henribikouri/mon-repo
+    - name: django
+      icon: fas fa-leaf
+    - name: sqlite
+      icon: fas fa-database
+    - name: bootstrap
+      icon: fab fa-bootstrap
+  github: https://github.com/Henribikouri/Appli-Teleconsultation
   demo: https://mon-site-demo.com # Optionnel
   theme_color: "#149f98" 
   secondary_color: "#ffc107"
 
 
-- name: Système de Détection d'Intrusion
-  description: Une solution basée sur l'IA pour analyser le trafic réseau en temps réel et bloquer les anomalies.
+- name: Recherche operationnelle 
+  description: Implémentation d'un Arbre Généalogique avec des Algorithmes de Recherches.
   image: assets/img/projets/RV.jpg # Mettez une vraie image ici
   status: Terminé # Nouveau !
   status_color: success # success (vert), warning (jaune), info (bleu)
-  date: Oct 2023
+  date: Dec 2024
   tech:
     - name: Python
       icon: fab fa-python
-    - name: TensorFlow
-      icon: fas fa-brain
-    - name: Docker
-      icon: fab fa-docker
-  github: https://github.com/Henribikouri/mon-repo
+    - name: disktra
+      icon: fas fa-route
+    - name: prim
+      icon: fas fa-tree
+  github: https://github.com/Henribikouri/Recherche_Operationnelle
   demo: https://mon-site-demo.com # Optionnel
