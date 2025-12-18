@@ -9,7 +9,7 @@
     <ul class="navbar-nav mr-auto">
         {% for item in site.data.nav.links %}
               <li class="nav-item">
-                  <a href="/{{ item.url }}" class="nav-link" style="font-family:{{ theme.link-font }};color:{{ theme.nav-text}};">{{ item.title }}</a>
+                  <a href="{{ item.url }}" class="nav-link" style="font-family:{{ theme.link-font }};color:{{ theme.nav-text}};">{{ item.title }}</a>
               </li>
         {% endfor %}
     </ul>
