@@ -13,7 +13,7 @@ email: henri.bikouri@enspy-uy1.cm
 description: Ingénieur en génie informatique de l'École Polytechnique. Spécialisé en IA et Cloud.
 keywords: Henri Bikouri, ingénieur informatique, génie logiciel, intelligence artificielle, cloud computing, portfolio développeur, ENSPY, Yaoundé
 baseurl: ""                                      # the subpath of your site, e.g. /blog
-url: "https://henribikouri.github.io"          # the base hostname & protocol for your site
+url: ""          # the base hostname & protocol for your site
 image: /assets/img/croppeda.jpg               # used to generate site link preview
 image_alt: Site web professionnel de Henri BIKOURI, ingénieur en génie informatique
 
