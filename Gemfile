@@ -4,6 +4,7 @@ gem 'jekyll'                    #Needed since this is a theme for Jekyll
 gem 'jekyll-feed'
 gem 'jekyll-scholar'
 gem 'jekyll-environment-variables'
+gem 'webrick'
 
 group :jekyll_plugins do
   gem 'jekyll-seo-tag'
@@ -12,3 +13,4 @@ group :jekyll_plugins do
   gem 'jekyll-paginate-v2'
   gem 'jekyll-include-cache'
 end     
+
