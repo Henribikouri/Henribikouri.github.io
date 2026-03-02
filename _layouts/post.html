@@ -1,15 +1,218 @@
 ---
 layout: default # Ou le layout principal de votre thème
 ---
+<style>
+   
 
+/* Correction des titres dans l'article pour éviter l'effet "sous-titre" */
+.article-content h2 {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    margin-top: 50px !important;
+    margin-bottom: 20px !important;
+    color: #0f172a;
+}
+
+
+
+/* --- GESTION DES IMAGES ET ÉQUATIONS SUR PC --- */
+
+
+.mjx-chtml {
+    text-align: center !important; /* Équations centrées sur PC */
+    margin: 30px 0 !important;
+}
+
+/* --- RESPONSIVE MOBILE (On ne casse pas ce qui marche) --- */
+@media (max-width: 768px) {
+    .article-content {
+        padding: 0 15px !important;
+    }
+    .post-header .container {
+        align-items: center !important; /* On peut rester centré sur mobile */
+        text-align: center;
+    }
+}
+    /* --- CONFIGURATION PREMIUM --- */
+    :root {
+        --brand: #149f98;
+        --dark: #0f172a;
+        --gray-light: #f8fafc;
+        --text-main: #334155;
+        --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Typographie Immersive */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+    /* .post-content {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-main);
+        background: white;
+    } */
+
+    /* Header / Jumbotron "Vibe" */
+    .jumbotron {
+        border-radius: 0 !important;
+        transition: all 0.5s ease;
+    }
+    
+  
+    /* Optimisation de la lecture (The "Sweet Spot") */
+    
+
+
+    /* Equations & MathJax */
+    .mjx-chtml {
+        padding: 20px 0;
+        overflow-x: auto;
+        font-size: 110% !important;
+    }
+
+    /* Images percutantes */
+    .article-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: var(--shadow-premium);
+        margin: 40px 0;
+        display: block;
+    }
+
+    /* Bloc Interaction (Premium Card) */
+    /* .interaction-block {
+        border: none !important;
+        background: var(--gray-light) !important;
+        box-shadow: var(--shadow-premium);
+        border-radius: 20px !important;
+        transition: transform 0.3s ease;
+    } */
+
+    .reaction-btn {
+        border: 1px solid #e2e8f0 !important;
+        background: white !important;
+        padding: 12px 25px !important;
+        border-radius: 12px !important;
+        font-weight: 600 !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .reaction-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Newsletter "Call to Action" */
+    /* .newsletter-block {
+        background: linear-gradient(135deg, #f0f8ff 0%, #e6fffa 100%) !important;
+        border: none !important;
+        padding: 50px !important;
+        box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    } */
+
+    /* .newsletter-block input {
+        border: 2px solid #cbd5e1 !important;
+        height: 50px;
+        border-radius: 10px !important;
+    } */
+
+    /* Adaptabilité Mobile */
+    @media (max-width: 768px) {
+        .article-content {
+            font-size: 1.15rem;
+            padding: 0 15px;
+        }
+        .jumbotron {
+            min-height: 350px !important;
+        }
+        .display-3 {
+            font-size: 2rem !important;
+        }
+    }
+
+    /* Barre de progression de lecture */
+    #read-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 5px;
+        background: var(--brand);
+        z-index: 9999;
+    }
+    
+
+    /* Positionnement et Design du Badge Nouveau */
+.new-post-tag {
+    position: absolute;
+    top: 30px;
+    right: 30px; /* Sur PC, il se place en haut à droite de l'image */
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInRight 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pulse-icon {
+    display: inline-block;
+    animation: ring 2s ease-in-out infinite;
+}
+
+/* Animation douce de l'icône */
+@keyframes ring {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-15deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(0); }
+    100% { transform: rotate(0); }
+}
+
+/* Entrée élégante du badge */
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Ajustement Mobile */
+@media (max-width: 768px) {
+    .new-post-tag {
+        top: 20px;
+        right: 20px;
+        padding: 6px 12px;
+        font-size: 0.65rem;
+    }
+}
+
+</style>
+
+<div id="read-progress"></div>
 <article class="post-content">
     <header class="post-header">
+        
         <div class="jumbotron jumbotron-fluid position-relative mb-0" style="background-image: url('{{ page.image | relative_url }}'); background-size: cover; background-position: center; min-height: 450px;">
             <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));"></div>
             <div class="container position-relative h-100 d-flex flex-column justify-content-end pb-5" style="min-height: 450px; z-index: 2;">
-                <span class="badge badge-pill badge-danger ml-auto animate__animated animate__flash animate__infinite" style="font-size: 0.8rem;">
-                    <i class="fas fa-bell"></i> NOUVEAU
-                </span>
+                {% assign post_date = page.date | date: '%s' | plus: 0 %}
+                {% assign now_date = 'now' | date: '%s' | plus: 0 %}
+                {% assign diff_seconds = now_date | minus: post_date %}
+                {% if diff_seconds <= 604800 %}
+                <div class="new-post-tag">
+                    <span class="pulse-icon"><i class="fas fa-bell"></i></span>
+                    <span class="tag-text">NOUVEAUTÉ</span>
+                </div>
+                {% endif %}
                 <div class="mb-3">
                     {% for category in page.categories %}
                     <span class="badge badge-pill badge-primary text-uppercase px-3 py-2 mr-2" style="background-color: #149f98; letter-spacing: 1px;">{{ category }}</span>
@@ -219,4 +422,12 @@ layout: default # Ou le layout principal de votre thème
             }
         });
     });
+
+    // A ajouter dans ton bloc <script> actuel
+window.onscroll = function() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("read-progress").style.width = scrolled + "%";
+};
 </script>
