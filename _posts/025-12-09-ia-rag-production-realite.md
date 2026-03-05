@@ -23,6 +23,7 @@ Un Large Language Model (LLM) comme GPT-4 est un génie figé dans le temps. Il 
 Si vous lui posez une question sur un document interne, il va halluciner une réponse plausible mais fausse.
 
 **L'approche naïve :** Copier-coller le document dans le prompt.
+
 **L'échec :** Vous explosez la fenêtre de contexte (Context Window) et votre facture API s'envole.
 
 ## La Solution Architecturale : Le RAG (Retrieval-Augmented Generation)

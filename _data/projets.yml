@@ -72,7 +72,7 @@
 
 - name: Recherche operationnelle 
   description: Implémentation d'un Arbre Généalogique avec des Algorithmes de Recherches.
-  image: assets/img/projets/RV.jpg # Mettez une vraie image ici
+  image: assets/img/projets/arbre.jpg # Mettez une vraie image ici
   status: Terminé # Nouveau !
   status_color: success # success (vert), warning (jaune), info (bleu)
   date: Dec 2024
