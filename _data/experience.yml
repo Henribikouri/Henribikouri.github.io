@@ -1,4 +1,49 @@
 
+- title: Stage Academique
+  company: ENSPY
+  company_url: https://polytechnique.cm  # <--- NOUVELLE CLÉ À AJOUTER
+  domain: Genie Logiciel
+  logo_url: /assets/img/icons/enspy.png # <--- NOUVEAU: Chemin vers votre logo
+  location: Melen, Cameroun
+  period: Fev - Juillet. 2026
+  icon_type: fas fa-graduation-cap # <--- NOUVEAU: Icône Font Awesome pour la catégorie (ex: cadenas pour Sécurité)
+  highlights:
+    - Memoire de fin d'etudes de Master 2 .
+    - Une approche d'integration de l'ingenierie dirigee par les modeles et l'IA generative pour la production des logiciels.  .
+  
+  doc_link1: /assets/pdf/MEMOIRE_BIKOURI_Henri_M2.pdf # <--- NOUVELLE CLÉ POUR LE LIEN
+  doc_text1: MEMOIRE Fr # <
+
+  slides_link: https://youtu.be/UEg6w6n9SXw # <--- NOUVELLE CLÉ 1
+  slides_text: Presentation  # <--- NOUVELLE CLÉ 2
+
+  technologies:
+  - name: eclipse
+    url: https://www.eclipse.org/
+  - name: python  
+    url: https://www.python.org/
+  - name: llm
+    url: https://en.wikipedia.org/wiki/Large_language_model
+
+
+- title: Stage professionnel
+  company: Valoris
+  company_url: https://valoris.cm/
+  domain: Genie Logiciel
+  logo_url: /assets/img/icons/valoris.png # logo à déposer dans assets/img/icons/
+  location: Cameroun · Supervision à distance (Royaume-Uni)
+  period: 2026 # TODO: préciser les mois (ex. Juin - Sept. 2026)
+  icon_type: fas fa-laptop-code
+  highlights:
+    - Développement d'une application de e-learning pour l'obtention de crédits CPD (Continuing Professional Development) en ingénierie.
+    - Supervision et collaboration à distance avec une équipe basée au Royaume-Uni.
+
+  doc_link1: /assets/pdf/Convention_stage_Valoris.pdf # convention de stage à déposer dans assets/pdf/
+  doc_text1: Convention de stage (PDF)
+
+
+
+
 - title: Projet Sélection  
   company: l'X
   company_url: https://www.polytechnique.edu/en   # <--- NOUVELLE CLÉ À AJOUTER
